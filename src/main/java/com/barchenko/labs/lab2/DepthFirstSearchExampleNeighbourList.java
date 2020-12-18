@@ -15,7 +15,7 @@ public class DepthFirstSearchExampleNeighbourList
         while (!stack.isEmpty())
         {
             Node element=stack.pop();
-            if(!element.visited)
+            if(!element.visited && stack.size() != 0)
             {
                 System.out.print(element.data + " ");
                 element.visited=true;
@@ -41,14 +41,18 @@ public class DepthFirstSearchExampleNeighbourList
         node1.addNeighbours(node2);
         node1.addNeighbours(node4);
         node1.addNeighbours(node5);
+
         node2.addNeighbours(node1);
         node2.addNeighbours(node3);
+
         node3.addNeighbours(node2);
         node3.addNeighbours(node4);
         node3.addNeighbours(node5);
-        node4.addNeighbours(node3);
+
         node4.addNeighbours(node1);
+        node4.addNeighbours(node3);
         node4.addNeighbours(node5);
+
         node5.addNeighbours(node1);
         node5.addNeighbours(node3);
         node5.addNeighbours(node4);

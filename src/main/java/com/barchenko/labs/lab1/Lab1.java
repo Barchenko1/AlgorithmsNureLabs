@@ -9,7 +9,7 @@ public class Lab1 {
         for (int i = 0; i < arr1.length; i++) {
             arr1[i] = i;
         }
-        long x1 = 100000000;
+        long x1 = 300000001;
         double before1 = System.nanoTime();
         int result1 = ls.lineSearch(arr1, x1);
         double after1 = System.nanoTime();
